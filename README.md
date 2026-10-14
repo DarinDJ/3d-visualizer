@@ -32,6 +32,10 @@ Requires Python 3.9+ and a graphics driver with OpenGL 3.3 (any desktop or lapto
 including macOS, where the forward-compatible core profile is requested automatically).
 You can also drag a mesh file onto the window to load it.
 
+**No terminal needed on Windows:** double-click `run.bat` to open the viewer, or drop a `.obj` / `.stl` /
+`.ply` file onto `run.bat` to open that model. The script installs the requirements on first use and
+keeps the window open if something fails, so the error can be read.
+
 ## Controls
 
 | Input | Action |
