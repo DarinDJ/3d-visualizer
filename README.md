@@ -1,11 +1,7 @@
-# 3D Model Viewer, written from scratch
+# 3D Model Viewer
 
-**Homework: "Make your own visualizer"** (camera module, object loader, mouse manipulation) plus a
-one-page report on recent 3-D technology.
-Darin Johnson, October 2026.
 
-A desktop 3-D viewer written in Python. Every graded part is hand-written in this repository: the
-camera matrices, the file parsers and the mouse interaction. The only libraries are `numpy` (arrays),
+A desktop 3-D viewer written in Python. The only libraries are `numpy` (arrays),
 `PyOpenGL` (raw OpenGL bindings, no scene graph) and `glfw` (opens the window and delivers mouse and
 keyboard events). No viewer or geometry library such as Open3D, trimesh, pyrender or three.js is used.
 
