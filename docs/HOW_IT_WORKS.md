@@ -1,7 +1,7 @@
 # How the viewer works
 
 This document explains the implementation in the order the data flows through it, so that every
-line of the code can be understood and defended. The three graded components (camera module, object
+line of the code can be understood and defended. The three main components (camera module, object
 loader, mouse manipulation) each have their own section; rendering and testing follow.
 
 ```
@@ -97,7 +97,7 @@ P = | 2fx/w   0     (w-2cx)/w     0      |
 
 A test checks that with `fx = fy = (h/2)/tan(fov/2)` and the principal point at the image centre this is
 exactly `perspective()`, and that `project()` agrees with the pinhole formula to six decimals. This is
-the bridge between the viewer and the "camera models" part of the report.
+the bridge between the viewer and the pinhole camera model used in computer vision.
 
 ### 1.5 `OrbitCamera`
 
@@ -262,6 +262,6 @@ a hidden window, draws one frame and saves it.
 * **Arcball rotation**: map the cursor to a virtual sphere and rotate with quaternions, which removes
   the pole clamp of the turntable camera.
 * **Picking**: invert `P * V`, cast the pixel's ray into the scene and intersect it with the triangles.
-* **glTF / USD loading** and PBR materials (see the converters section of the report).
+* **glTF / USD loading** and PBR materials.
 * **Gaussian-splat `.ply` files**: the PLY parser already reads arbitrary properties; a splat renderer
   would sort the points by depth and draw screen-aligned quads with the Gaussian footprint.
